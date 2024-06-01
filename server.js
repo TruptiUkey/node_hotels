@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
 
-//==============================================================
+//=============================================================
+//-------configuring .env file to identify it by server
+require('dotenv').config();
+
 //-----------Importing database
 const db = require('./db');
 
-//===============================================================
 //-----------Importing body-parser
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()); //.json can be replacable with the type of data sent by the client
@@ -13,6 +15,9 @@ app.use(bodyParser.json()); //.json can be replacable with the type of data sent
 //===============================================================
 //-----------Importing schema
 //const person = require('./models/person');
+
+//-----------using variable from .env file
+const PORT = process.env.PORT || 3000;
 
 //===============================================================
 
@@ -33,6 +38,6 @@ app.get('/',function(req,res){
 
 //=================================================================
 //-----------Listening Port
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('You are connected to nodejs server with port 3000');
 })
