@@ -45,9 +45,9 @@ router.get('/',async (req,res)=>{
 
 router.get('/:tasteType',async (req,res)=>{
     try{
-        const tasteType = req.params.workType;
-        if(tasteType =='chef' || tasteType == 'manager' || tasteType=='waiter'){
-            const response = await person.find({taste:tasteType});
+        const tasteType = req.params.tasteType;
+        if(tasteType =='sweet' || tasteType == 'sour' || tasteType=='spicy'){
+            const response = await menuItem.find({taste:tasteType});
             console.log('Data find Successfully!');
             res.status(200).json(response);
         }else{
