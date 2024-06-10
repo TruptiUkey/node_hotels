@@ -1,7 +1,8 @@
+require('dotenv').config();    //configuring .env file to identify it by server
 const express = require('express');
 const app = express();
 const db = require('./db');     //Importing database
-require('dotenv').config();    //configuring .env file to identify it by server
+
 
 //const person = require('./../models/person');           //Importing person model
 const personRoutes = require('./routes/personRoutes');  //importing personRoutes

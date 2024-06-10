@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 //------------------------------------------
-const mongoURL = process.env.MONGODB_URL_LOCAL;     //using variable from .env file
-//const mongoURL = process.env.MONGODB_URL;           //using variable from .env file
+//const mongoURL = process.env.MONGODB_URL_LOCAL;     //using variable from .env file
+const mongoURL = process.env.MONGODB_URL;           //using variable from .env file
 
 //------------------------------------------
 mongoose.connect(mongoURL, {        //establish connection
