@@ -57,7 +57,7 @@ app.get('/',function(req,res){   //here in between endpoint and request function
 
 //===============================================================
 
-app.use('/person',localAuthMiddleware,personRoutes);
+app.use('/person',personRoutes);
 app.use('/menu',menuRoutes);
 
 //=================================================================
